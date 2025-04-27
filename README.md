@@ -6,8 +6,8 @@ different kernel result, enjoy it
 matplotlib is only the requirement.
 
 ## Requirements
-cuda toolkits
-cmake
+- cuda toolkits
+- cmake
 
 ## Build instructions 
 
