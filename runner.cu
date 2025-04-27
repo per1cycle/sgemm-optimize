@@ -16,7 +16,7 @@
 #include <cublas_v2.h>
 #include <cuda_runtime.h>
 
-int kernel_num = 6;
+const int kernel_num = 6;
 const int loop = 5;
 const int shape_num = 20;
 int shape[shape_num];
@@ -25,21 +25,21 @@ std::string marker = ".ov^<>s*P+xD";
 // todo
 namespace init
 {
-
+    void gen_shape()
+    {
+        for(int i = 0; i < shape_num; i ++)
+        {
+            shape[i] = (i + 1) * 256;
+        }
+    }
 };
 
+// todo
 namespace generator
 {
     
 };
 
-void gen_shape()
-{
-    for(int i = 0; i < shape_num; i ++)
-    {
-        shape[i] = (i + 1) * 256;
-    }
-}
 
 std::string current_time()
 {
@@ -230,7 +230,7 @@ void run_kernel(int kernel_type, int N, int M, int K, float *d_a, float *d_b, fl
 
 int main()
 {
-    gen_shape();
+    init::gen_shape();
     import();
     /**
      * kernel type:
