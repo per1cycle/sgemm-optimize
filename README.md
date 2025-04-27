@@ -1,5 +1,5 @@
 # sgemm optimization learning notes
-
+collections from [share](https://github.com/per1cycle/share/tree/main/jff/playground/compute/cuda)
 the project will automatically generate the plot script of
 different kernel result, enjoy it
 
