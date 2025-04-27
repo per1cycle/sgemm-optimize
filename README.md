@@ -1,5 +1,10 @@
 # sgemm optimization learning notes
 
+the project will automatically generate the plot script of
+different kernel result, enjoy it
+
+matplotlib is only the requirement.
+
 ## Requirements
 cuda toolkits
 cmake
