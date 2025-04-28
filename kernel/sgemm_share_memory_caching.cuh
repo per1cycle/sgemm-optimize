@@ -17,7 +17,7 @@ __global__ void sgemm_share_memory_caching(int N, int M, int K, float *a, float 
     __shared__ float a_share[BLK * BLK];
     __shared__ float b_share[BLK * BLK];
 
-    for(int k = 0; k < M; k += BLK)
+    for(int m = 0; m < M; m += BLK)
     {
         a_share[thread_row * BLK + thread_col] = a[thread_row * M + thread_col];
         b_share[thread_row * BLK + thread_col] = b[thread_row * K + thread_col];
